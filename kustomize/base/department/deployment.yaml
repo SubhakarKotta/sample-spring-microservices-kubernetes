@@ -35,16 +35,3 @@ spec:
             secretKeyRef:
               name: mongodb
               key: database-password
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: department
-  labels:
-    app: department
-spec:
-  ports:
-  - port: 8080
-    protocol: TCP
-  selector:
-    app: department

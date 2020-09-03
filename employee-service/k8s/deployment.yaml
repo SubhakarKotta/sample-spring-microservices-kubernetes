@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: employee
-        image: piomin/employee:1.0
+        image: subhakarkotta/employee:latest
         ports:
         - containerPort: 8080
         env:

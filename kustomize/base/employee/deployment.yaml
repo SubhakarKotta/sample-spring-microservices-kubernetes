@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: department
+  name: employee
   labels:
-    app: department
+    app: employee
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: department
+      app: employee
   template:
     metadata:
       labels:
-        app: department
+        app: employee
     spec:
       containers:
-      - name: department
-        image: subhakarkotta/department:latest
+      - name: employee
+        image: subhakarkotta/employee:latest
         ports:
         - containerPort: 8080
         env:
@@ -35,16 +35,3 @@ spec:
             secretKeyRef:
               name: mongodb
               key: database-password
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: department
-  labels:
-    app: department
-spec:
-  ports:
-  - port: 8080
-    protocol: TCP
-  selector:
-    app: department

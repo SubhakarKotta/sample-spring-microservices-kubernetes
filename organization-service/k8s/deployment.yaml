@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: organization
-        image: piomin/organization:1.0
+        image: subhakarkotta/organization:latest
         ports:
         - containerPort: 8080
         env:

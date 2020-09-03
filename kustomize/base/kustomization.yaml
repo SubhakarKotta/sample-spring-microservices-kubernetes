@@ -1,0 +1,17 @@
+resources:
+  - admin/deployment.yaml
+  - admin/configmap.yaml
+  - admin/service.yaml
+  - mongo/deployment.yaml
+  - mongo/service.yaml
+  - mongo/configmap.yaml
+  - mongo/secret.yaml
+  - department/deployment.yaml
+  - department/service.yaml
+  - employee/deployment.yaml
+  - employee/service.yaml
+  - gateway/deployment.yaml
+  - gateway/service.yaml
+  - organization/deployment.yaml
+  - organization/service.yaml
+  - ingress.yaml

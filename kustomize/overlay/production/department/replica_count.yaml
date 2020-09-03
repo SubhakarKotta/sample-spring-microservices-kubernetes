@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: department
+  labels:
+    app: department
+spec:
+  replicas: 3

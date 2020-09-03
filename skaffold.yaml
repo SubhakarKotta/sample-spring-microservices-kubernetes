@@ -1,0 +1,24 @@
+apiVersion: skaffold/v2beta6
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+  - image: subhakarkotta/employee
+    jib:
+      project: employee-service
+  - image: subhakarkotta/department
+    jib:
+      project: department-service
+  - image: subhakarkotta/organization
+    jib:
+      project: organization-service
+  - image: subhakarkotta/gateway
+    jib:
+      project: gateway-service
+  - image: subhakarkotta/admin
+    jib:
+      project: admin-service
+deploy:
+  kustomize:
+      paths: [kustomize/overlay/production]

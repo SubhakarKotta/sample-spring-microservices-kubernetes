@@ -1,0 +1,9 @@
+bases:
+  - ../../base
+patches:
+  - department/replica_count.yaml
+  - department/resource_limits.yaml
+  - employee/replica_count.yaml
+  - employee/resource_limits.yaml
+  - organization/replica_count.yaml
+  - organization/resource_limits.yaml
